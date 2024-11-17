@@ -110,8 +110,7 @@ class TicketSerializer(serializers.ModelSerializer):
         fields = ("id", "row", "seat", "movie_session")
         constraints = [UniqueConstraint(
             fields=["movie_session", "row", "seat"],
-            name="unique_ticket_seat_trip"
-            )
+            name="unique_ticket_seat_trip")
         ]
 
 
